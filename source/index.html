@@ -5,10 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Poker hands</title>
     <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="//unpkg.com/cardsJS/dist/cards.min.css"/>
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Poker hands</a>
+            </div>
+            <button id="add-card" class="btn btn-success navbar-btn pull-right">Kaart toevoegen</button>
+
+        </div>
+    </nav>
+</header>
+<main id="app">
+    <div id="cards-list">
+        {{#each cards}}
+        <img class='card' src='//unpkg.com/cardsJS/dist/cards/{{id}}.svg'>
+        {{/each}}
+    </div>
+</main>
+<footer class="footer">
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <small>
+                        &copy;2017 Steven Braham
+                    </small>
+                </a>
+            </div>
+        </div>
+    </nav>
+</footer>
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/cardsJS/dist/cards.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
