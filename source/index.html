@@ -7,21 +7,50 @@
     <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="vendor/flat-ui/dist/css/flat-ui.min.css">
     <link rel="stylesheet" type="text/css" href="//unpkg.com/cardsJS/dist/cards.min.css"/>
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse navbar-static">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Poker hands</a>
-            </div>
-            <button id="add-card" class="btn btn-success navbar-btn pull-right">Kaart toevoegen</button>
 
+            </div>
+            <button id="add-card" class="btn btn-success btn-xs navbar-btn pull-right">Add card</button>
         </div>
     </nav>
 </header>
-<main id="app">
+<main class="container">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="app">
+        <cards-list></cards-list>
+    </div>
+
     <div id="cards-list">
         {{#each cards}}
         <img class='card' src='//unpkg.com/cardsJS/dist/cards/{{id}}.svg'>
@@ -43,9 +72,8 @@
 </footer>
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//unpkg.com/vue/dist/vue.js"></script>
 <script src="//unpkg.com/cardsJS/dist/cards.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
-<script src="js/main.js"></script>
+<script src="build/js/app.js"></script>
 </body>
 </html>
