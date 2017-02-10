@@ -12,4 +12,6 @@ elixir.config.viewPath = './';
 elixir(function (mix) {
     mix.sass('style.scss');
     mix.webpack('app.js');
+    mix.copy('source/images', 'build/images');
+    mix.copy('source/index.html', 'build/index.html');
 });
