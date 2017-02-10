@@ -1,2 +1,24 @@
 @import '../../node_modules/designmodo-flat-ui/dist/css/flat-ui.min';
 @import '../../node_modules/cardsJS/dist/cards.min';
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.nav-tabs > li.active > a {
+  border-radius: 0;
+}
+
+.btn-nav.pull-right {
+  margin-right: 15px;
+  margin-top: 6px;
+}
+
+ul.nav.nav-tabs > li {
+  width: 50%;
+}
+
+footer nav .container {
+  margin-top: 12px;
+}

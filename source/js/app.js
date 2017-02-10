@@ -10,6 +10,7 @@ new Vue({
     data: {
         store: {
             cards: ['3C', 'KS'],
+            myCards: []
         }
     },
     components: {CardsList}

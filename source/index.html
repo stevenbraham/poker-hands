@@ -15,53 +15,34 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Poker hands</a>
-
+                <a class="btn btn-nav btn-info pull-right" target="_blank" href="https://github.com/stevenbraham/poker-hands">How to use</a>
             </div>
-            <button id="add-card" class="btn btn-success btn-xs navbar-btn pull-right">Add card</button>
         </div>
     </nav>
 </header>
-<main class="container" id="app">
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
+<main id="app">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#my-cards">My cards</a></li>
+        <li><a data-toggle="tab" href="#table">Cards on table</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="my-cards" class="tab-pane fade in active container">
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-    </div>
-    <div>
-        <cards-list></cards-list>
-    </div>
-
-    <div id="cards-list">
-
+        <div id="table" class="tab-pane fade container">
+            <h3>Table</h3>
+            <cards-list></cards-list>
+        </div>
     </div>
 </main>
 <footer class="footer">
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <small>
-                        &copy;2017 Steven Braham
-                    </small>
-                </a>
+            <div class="col-md-12">
+                <small>
+                    &copy;2017 <a href="https://braham.biz/en" target="_blank">Steven Braham</a>
+                </small>
             </div>
         </div>
     </nav>
