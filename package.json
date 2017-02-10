@@ -19,7 +19,8 @@
   "dependencies": {
     "cardsJS": "^1.1.1",
     "designmodo-flat-ui": "^2.3.0",
-    "vue": "^2.1.10"
+    "vue": "^2.1.10",
+    "vue-stash": "^2.0.1-beta"
   },
   "browserify": {
     "transform": [

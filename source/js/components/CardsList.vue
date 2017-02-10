@@ -1,13 +1,18 @@
 <template>
     <div id="cards-list">
-        <img class="card" v-for="card in cards" v-bind:src="'images/cards/'+card+'.svg'"/>
+        <img class="card" v-on:click="removeCard" v-for="(card,index) in cards" v-bind:data-index="index" v-bind:src="'images/cards/'+card+'.svg'"/>
     </div>
+
+
 </template>
 <script>
     export default{
-        data(){
-            return{
-                cards:['3C','KS']
+        store: ['cards'],
+        methods:{
+             removeCard:function(e){
+                if(confirm('Are you sure?')){
+                    this.cards.splice($(e.srcElement).data('index'),1);
+                }
             }
         }
     }
