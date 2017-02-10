@@ -1,13 +1,32 @@
 @import '../../node_modules/designmodo-flat-ui/dist/css/flat-ui.min';
 @import '../../node_modules/cardsJS/dist/cards.min';
 
-.navbar {
+.navbar, #add-card .form-group {
   margin-bottom: 0;
   border-radius: 0;
 }
 
-.nav-tabs > li.active > a {
+.tab-pane {
+  margin-top: 15px;
+}
+
+.nav-tabs > li.active > a, #value-input .btn, #suits-input .btn, #add-card .btn-success {
   border-radius: 0;
+}
+
+#cards-list .card:first-child {
+  width: 25%;
+}
+
+#cards-list .card {
+  width: percentage(1/6);
+  padding-right: 4px;
+}
+
+#add-card {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1em;
 }
 
 .btn-nav.pull-right {
@@ -16,7 +35,23 @@
 }
 
 ul.nav.nav-tabs > li {
-  width: 50%;
+  width: 33%;
+}
+
+#add-card .btn-group {
+  width: 100%;
+}
+
+#suits-input .btn {
+  width: 25%;
+}
+
+#value-input .btn {
+  width: 20%;
+}
+
+#value-input .btn:last-child, #value-input .btn:nth-last-child(2), #value-input .btn:nth-last-child(3) {
+  width: 33.3333%;
 }
 
 footer nav .container {

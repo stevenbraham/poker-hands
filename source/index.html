@@ -23,7 +23,8 @@
 <main id="app">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#my-cards">My cards</a></li>
-        <li><a data-toggle="tab" href="#table">Cards on table</a></li>
+        <li><a data-toggle="tab" href="#table">Table</a></li>
+        <li><a data-toggle="tab" href="#my-hand">My hand</a></li>
     </ul>
     <div class="tab-content">
         <div id="my-cards" class="tab-pane fade in active container">
@@ -31,8 +32,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div id="table" class="tab-pane fade container">
-            <h3>Table</h3>
+            <add-card></add-card>
             <cards-list></cards-list>
+        </div>
+        <div id="my-hand" class="tab-pane fade container">
+            <h3>Table</h3>
         </div>
     </div>
 </main>
