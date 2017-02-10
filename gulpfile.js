@@ -10,8 +10,9 @@ elixir.config.assetsPath = 'source';
 elixir.config.publicPath = 'build';
 elixir.config.viewPath = './';
 elixir(function (mix) {
-    mix.sass('style.scss');
     mix.webpack('app.js');
     mix.copy('source/images', 'build/images');
+    mix.copy('node_modules/cardsJS/dist/cards', 'build/images/cards');
     mix.copy('source/index.html', 'build/index.html');
+    mix.sass('style.scss');
 });

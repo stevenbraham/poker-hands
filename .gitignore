@@ -166,4 +166,5 @@ jspm_packages
 build
 dist
 
+vendor
 # End of https://www.gitignore.io/api/phpstorm,osx,intellij,node

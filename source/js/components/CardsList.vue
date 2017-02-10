@@ -1,15 +1,14 @@
 <template>
-    <div>
-        <div>this is template body</div>
+    <div id="cards-list">
+        <img class="card" v-for="card in cards" v-bind:src="'images/cards/'+card+'.svg'"/>
     </div>
 </template>
 <script>
     export default{
         data(){
             return{
-                msg:'hello vue'
+                cards:['3C','KS']
             }
         }
     }
-
 </script>
