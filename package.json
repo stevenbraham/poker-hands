@@ -4,7 +4,7 @@
   "description": "A webapp that shows which poker hand you currently have",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "del": "^2.2.2",
+    "jasmine-es6": "^0.4.0",
     "laravel-elixir": "^6.0.0-15",
     "laravel-elixir-browserify-official": "^0.1.3",
     "laravel-elixir-vue-2": "^0.3.0",
