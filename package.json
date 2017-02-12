@@ -4,14 +4,15 @@
   "description": "A webapp that shows which poker hand you currently have",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stevenbraham/poker-hands.git"
   },
   "author": "Steven Braham <steven@braham.biz>",
-  "license": "ISC",
+  "license": "Apache2",
   "bugs": {
     "url": "https://github.com/stevenbraham/poker-hands/issues"
   },
