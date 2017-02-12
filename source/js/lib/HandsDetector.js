@@ -118,6 +118,20 @@ class HandsDetector {
         return (this.isStraightFlush() && this.cardsByValue.hasOwnProperty("10") && this.cardsByValue.hasOwnProperty("A"));
     }
 
+    combinedTest() {
+        return {
+            'royalFlush': this.isRoyalFlush(),
+            'straightFlush': this.isStraightFlush(),
+            'fourOfAKind': this.isFourOfAKind(),
+            'fullHouse': this.isAFullHouse(),
+            'flush': this.isFlush(),
+            'straight': this.isStraight(),
+            'threeOfAKind': this.isThreeOfAKind(),
+            'twoPair': this.isTwoPair(),
+            'pair': this.isOnePair()
+        };
+    }
+
     /**
      * Check if a pair of values in present
      * @param {Number} cardsInPair how many cards are a pair

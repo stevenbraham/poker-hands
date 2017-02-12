@@ -1,15 +1,7 @@
-import Vue from 'vue';
-import VueStash from 'vue-stash';
-import CardsJs from 'cardsJS/dist/cards.min.js';
-import CardsList from './components/CardsList.vue';
-import AddCard from './components/AddCard.vue';
-import HandsDetector from './lib/HandsDetector.js';
-
-console.log(HandsDetector);
-
-let x = new HandsDetector();
-
-x.sayHi();
+import Vue from "vue";
+import VueStash from "vue-stash";
+import CardsList from "./components/CardsList.vue";
+import AddCard from "./components/AddCard.vue";
 
 Vue.use(VueStash);
 
@@ -17,7 +9,7 @@ new Vue({
     el: '#app',
     data: {
         store: {
-            cards: ['3C', 'KS'],
+            cards: [],
             myCards: []
         }
     },
