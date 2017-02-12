@@ -2,7 +2,11 @@
 
 ([Working demo](https://sb7.nl/poker))
 
-This is a tool that I developed for myself to use during poker games. In the first tab you choose your own cards. In the second tab, keep adding cards as they appear on the table. The application will let you know which poker hand you currently have. This is useful if you don't know the rules very well like me.
+**Note: the UI of this application is intended to be used on a smartphone**
+
+This is a tool that I developed for myself to use during poker games. In the first tab you choose your own cards. In the second tab, keep adding cards as they appear on the table. You can click on a card to delete it. 
+
+The application will let you know which poker hand you currently have. This is useful if you don't know the rules very well like me.
 
 #Technical information
 
