@@ -1,3 +1,5 @@
+# This application isn't finished yet
+
 #About
 
 ([Working demo](https://sb7.nl/poker))
@@ -13,6 +15,7 @@ The application will let you know which poker hand you currently have. This is u
 ## Libraries
 * This application has been developed with the [Vue.js](https://vuejs.org/) javascript framework.
 * I use [Vue stash](https://github.com/cklmercer/vue-stash) to share data between my components
+* The cards are from [CardsJs](https://github.com/richardschneider/cardsJS/)
 * The theme used is [Flat UI](https://designmodo.github.io/Flat-UI/)
 * For building I use the [Elixir gulp wrapper from Laravel](https://github.com/laravel/elixir)
 
