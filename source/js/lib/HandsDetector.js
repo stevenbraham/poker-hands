@@ -13,23 +13,34 @@ class HandsDetector {
      * @param cards
      */
     constructor(cards) {
+        this.possibleCards = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        cards = cards.sort();
         this.cardsCount = cards.length;
         this.cardsByValue = {};
         this.cardsBySuit = {};
         //split suit and value
         for (var i = 0, len = cards.length; i < len; i++) {
+            let cardValue, cardSuit = "";
             let splitted = cards[i].split("");
-            //splitted[1] = the suit
-            if (this.cardsByValue[splitted[0]]) {
-                this.cardsByValue[splitted[0]].push(splitted[1]);
+            if (cards[i].length == 3) {
+                //10
+                cardValue = "10";
+                cardSuit = splitted[2];
             } else {
-                this.cardsByValue[splitted[0]] = [splitted[1]];
+                cardValue = splitted[0];
+                cardSuit = splitted[1];
+            }
+            //splitted[1] = the suit
+            if (this.cardsByValue[cardValue]) {
+                this.cardsByValue[cardValue].push(cardSuit);
+            } else {
+                this.cardsByValue[cardValue] = [cardSuit];
             }
 
-            if (this.cardsBySuit[splitted[1]]) {
-                this.cardsBySuit[splitted[1]].push(splitted[0]);
+            if (this.cardsBySuit[cardSuit]) {
+                this.cardsBySuit[cardSuit].push(cardValue);
             } else {
-                this.cardsBySuit[splitted[1]] = [splitted[0]];
+                this.cardsBySuit[cardSuit] = [cardValue];
             }
         }
     }
@@ -67,9 +78,44 @@ class HandsDetector {
 
     isStraight() {
         if (this.cardsCount > 1) {
+            let keysPassed = [];
+            for (let cardValue in this.cardsByValue) {
+                if (this.cardsByValue.hasOwnProperty(cardValue)) {
+                    if (cardValue == "A") {
+                        //10 is needed to make a high straight
+                        keysPassed.push((this.cardsByValue.hasOwnProperty("10") ? 13 : 0));
+                    } else {
+                        keysPassed.push(this.possibleCards.indexOf(cardValue));
+                    }
+                }
+            }
+            keysPassed = keysPassed.sort(function (a, b) {
+                return a - b
+            });
 
+            //loop over all keys passed to see if they are in sequence
+            for (var i = 0, len = keysPassed.length; i < len; i++) {
+                if (i != (keysPassed.length - 1)) {
+                    let currentKey = keysPassed[i];
+                    let nextKey = keysPassed[i + 1];
+                    if ((currentKey != nextKey) && ((nextKey - currentKey) != 1)) {
+                        return false;
+                    }
+                } else {
+                    //last item reached without errors
+                    return true;
+                }
+            }
         }
         return false;
+    }
+
+    isStraightFlush() {
+        return (this.isFlush() && this.isStraight());
+    }
+
+    isRoyalFlush() {
+        return (this.isStraightFlush() && this.cardsByValue.hasOwnProperty("10") && this.cardsByValue.hasOwnProperty("A"));
     }
 
     /**
