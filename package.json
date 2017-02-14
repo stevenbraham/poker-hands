@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/stevenbraham/poker-hands#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "cardsJS": "^1.1.1",
     "designmodo-flat-ui": "^2.3.0",
+    "jquery": "^3.1.1",
     "vue": "^2.1.10",
     "vue-stash": "^2.0.1-beta"
   },

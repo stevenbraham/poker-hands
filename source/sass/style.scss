@@ -1,4 +1,6 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min';
 @import '../../node_modules/designmodo-flat-ui/dist/css/flat-ui.min';
+@import '//fonts.googleapis.com/css?family=Lato';
 @import '../../node_modules/cardsJS/dist/cards.min';
 
 .navbar, #add-card .form-group {
@@ -56,4 +58,8 @@ ul.nav.nav-tabs > li {
 
 footer nav .container {
   margin-top: 12px;
+}
+
+footer .col-md-12{
+  margin: 0.25em 0;
 }

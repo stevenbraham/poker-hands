@@ -1,3 +1,5 @@
+window.$ = window.jQuery = require('jquery');
+require ('bootstrap');
 import Vue from "vue";
 import VueStash from "vue-stash";
 import CardsList from "./components/CardsList.vue";
