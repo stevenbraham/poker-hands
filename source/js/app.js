@@ -3,6 +3,7 @@ require ('bootstrap');
 import Vue from "vue";
 import VueStash from "vue-stash";
 import CardsList from "./components/CardsList.vue";
+import OwnCards from "./components/OwnCards.vue";
 import AddCard from "./components/AddCard.vue";
 
 Vue.use(VueStash);
@@ -15,5 +16,5 @@ new Vue({
             myCards: []
         }
     },
-    components: {CardsList, AddCard}
+    components: {CardsList, AddCard, OwnCards}
 });

@@ -3,7 +3,7 @@
 @import '//fonts.googleapis.com/css?family=Lato';
 @import '../../node_modules/cardsJS/dist/cards.min';
 
-.navbar, #add-card .form-group {
+.navbar, .card-keyboard .form-group {
   margin-bottom: 0;
   border-radius: 0;
 }
@@ -12,8 +12,12 @@
   margin-top: 15px;
 }
 
-.nav-tabs > li.active > a, #value-input .btn, #suits-input .btn, #add-card .btn-success {
+.nav-tabs > li.active > a, #value-input .btn, #suits-input .btn, .card-keyboard .btn-success {
   border-radius: 0;
+}
+
+main {
+  padding: 53px 0 100px;
 }
 
 #cards-list .card:first-child {
@@ -25,12 +29,6 @@
   padding-right: 4px;
 }
 
-#add-card {
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 1em;
-}
-
 .btn-nav.pull-right {
   margin-right: 15px;
   margin-top: 6px;
@@ -40,26 +38,12 @@ ul.nav.nav-tabs > li {
   width: 33%;
 }
 
-#add-card .btn-group {
-  width: 100%;
-}
-
-#suits-input .btn {
-  width: 25%;
-}
-
-#value-input .btn {
-  width: 20%;
-}
-
-#value-input .btn:last-child, #value-input .btn:nth-last-child(2), #value-input .btn:nth-last-child(3) {
-  width: 33.3333%;
-}
+@import "components/CardKeyboard";
 
 footer nav .container {
   margin-top: 12px;
 }
 
-footer .col-md-12{
+footer .col-md-12 {
   margin: 0.25em 0;
 }

@@ -1,0 +1,26 @@
+.card-keyboard {
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.card-keyboard .btn-success, .card-keyboard .form-group {
+  border-radius: 0 !important;
+  margin-bottom: 0;
+}
+
+.btn-group.suits-input, .btn-group.value-input {
+  width: 100% !important;
+}
+
+.suits-input .btn {
+  width: 25%;
+}
+
+.value-input .btn {
+  width: 20%;
+}
+
+.value-input .btn:last-child, .value-input .btn:nth-last-child(2), .value-input .btn:nth-last-child(3) {
+  width: percentage(1/3);
+}
