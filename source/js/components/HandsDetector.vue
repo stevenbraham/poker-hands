@@ -1,6 +1,6 @@
 <template>
     <div class="col-md-12">
-        <a href="#my-hand" v-bind:class="'btn btn-block '+[hasMatch ? 'btn-success':'btn-danger']">
+        <a href="#my-hand" v-on:click="go" v-bind:class="'btn btn-block '+[hasMatch ? 'btn-success':'btn-danger']">
             {{hasMatch ? hand : 'No hands detected'}}
         </a>
     </div>
@@ -31,6 +31,9 @@
                     }
                 }
                 this.hasMatch = false;
+            },
+            go: function () {
+                $("#go-to-my-hand").click();
             }
         },
         watch: {

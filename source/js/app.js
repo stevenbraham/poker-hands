@@ -1,11 +1,12 @@
 window.$ = window.jQuery = require('jquery');
-require ('bootstrap');
+require('bootstrap');
 import Vue from "vue";
 import VueStash from "vue-stash";
 import CardsList from "./components/CardsList.vue";
 import OwnCards from "./components/OwnCards.vue";
 import AddCard from "./components/AddCard.vue";
 import HandsDetector from "./components/HandsDetector.vue";
+import HandsList from "./components/HandsList.vue";
 
 Vue.use(VueStash);
 
@@ -17,5 +18,5 @@ new Vue({
             myCards: []
         }
     },
-    components: {CardsList, AddCard, OwnCards, HandsDetector}
+    components: {CardsList, AddCard, OwnCards, HandsDetector, HandsList}
 });
