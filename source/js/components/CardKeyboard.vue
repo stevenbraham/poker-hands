@@ -35,7 +35,7 @@
                     //reset
                     $("#" + this.keyboardId + " .btn").removeClass('active');
                     var combined = value + suit;
-                    this.$emit('submit', {pair: combined})
+                    this.$emit('submit', {pair: combined, source: this.keyboardId})
                 }
             }
         },
