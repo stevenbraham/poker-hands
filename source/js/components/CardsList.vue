@@ -5,13 +5,13 @@
 
 
 </template>
-<script>
+<script type="text/babel">
     export default{
         store: ['cards'],
-        methods:{
-             removeCard:function(e){
-                if(confirm('Are you sure?')){
-                    this.cards.splice($(e.srcElement).data('index'),1);
+        methods: {
+            removeCard: function (e) {
+                if (confirm('Are you sure?')) {
+                    this.cards.splice($(e.srcElement).data('index'), 1);
                 }
             }
         }

@@ -1,5 +1,5 @@
 <template>
-    <div class="card-keyboard">
+    <div class="card-keyboard" v-bind:id="keyboardId">
         <div class="btn-group suits-input" id="suits-input" data-toggle="buttons">
             <label class="btn btn-primary">
                 <input checked type="radio" name="suit" value="S"/>♠️️
@@ -24,20 +24,25 @@
         </div>
     </div>
 </template>
-<script>
+<script type="text/babel">
     export default{
-       props: ['submitText'],
-       methods:{
-        submit:function(){
-          this.$emit('submit',{test:"34"})
-        }
-       },
-       data(){
-            return{
-             valueList:['A','2','3','4','5','6','7','8','9','10','J','Q','K'],
+        props: ['submitText', 'keyboardId'],
+        methods: {
+            submit: function () {
+                var suit = $('#' + this.keyboardId + ' input[name="suit"]:checked').val();
+                var value = $('#' + this.keyboardId + ' input[name="value"]:checked').val();
+                if (value && suit) {
+                    //reset
+                    $("#" + this.keyboardId + " .btn").removeClass('active');
+                    var combined = value + suit;
+                    this.$emit('submit', {pair: combined})
+                }
+            }
+        },
+        data(){
+            return {
+                valueList: ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'],
             }
         }
     }
-
-
 </script>
