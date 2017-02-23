@@ -5,6 +5,7 @@ import VueStash from "vue-stash";
 import CardsList from "./components/CardsList.vue";
 import OwnCards from "./components/OwnCards.vue";
 import AddCard from "./components/AddCard.vue";
+import HandsDetector from "./components/HandsDetector.vue";
 
 Vue.use(VueStash);
 
@@ -16,5 +17,5 @@ new Vue({
             myCards: []
         }
     },
-    components: {CardsList, AddCard, OwnCards}
+    components: {CardsList, AddCard, OwnCards, HandsDetector}
 });

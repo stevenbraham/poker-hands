@@ -68,7 +68,7 @@ class HandsDetector {
     isFlush() {
         for (let suit in this.cardsBySuit) {
             if (this.cardsBySuit.hasOwnProperty(suit)) {
-                if (this.cardsBySuit[suit].length == this.cardsCount) {
+                if (this.cardsBySuit[suit].length == this.cardsCount && this.cardsCount >= 3) {
                     return true;
                 }
             }
@@ -77,7 +77,7 @@ class HandsDetector {
     }
 
     isStraight() {
-        if (this.cardsCount > 1) {
+        if (this.cardsCount > 3) {
             let keysPassed = [];
             for (let cardValue in this.cardsByValue) {
                 if (this.cardsByValue.hasOwnProperty(cardValue)) {

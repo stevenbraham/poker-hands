@@ -8,53 +8,53 @@
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Poker hands</a>
-                <a class="btn btn-nav btn-info pull-right" target="_blank" href="https://github.com/stevenbraham/poker-hands">About</a>
+<div id="app">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Poker hands</a>
+                    <a class="btn btn-nav btn-info pull-right" target="_blank" href="https://github.com/stevenbraham/poker-hands">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#my-cards">My cards</a></li>
+            <li><a data-toggle="tab" href="#table">Table</a></li>
+            <li><a data-toggle="tab" href="#my-hand">My hand</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="my-cards" class="tab-pane fade in active container">
+                <own-cards></own-cards>
+            </div>
+            <div id="table" class="tab-pane fade container">
+                <add-card></add-card>
+                <cards-list></cards-list>
+            </div>
+            <div id="my-hand" class="tab-pane fade container">
+                <h3>Table</h3>
             </div>
         </div>
-    </nav>
-</header>
-<main id="app">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#my-cards">My cards</a></li>
-        <li><a data-toggle="tab" href="#table">Table</a></li>
-        <li><a data-toggle="tab" href="#my-hand">My hand</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="my-cards" class="tab-pane fade in active container">
-            <own-cards></own-cards>
-        </div>
-        <div id="table" class="tab-pane fade container">
-            <add-card></add-card>
-            <cards-list></cards-list>
-        </div>
-        <div id="my-hand" class="tab-pane fade container">
-            <h3>Table</h3>
-        </div>
-    </div>
-</main>
-<footer class="footer">
-    <nav class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-              <a href="#my-hand" class="btn btn-block btn-danger">No hands detected</a>
+    </main>
+    <footer class="footer">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <hands-detector></hands-detector>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <small>
+                            &copy;2017 <a href="https://braham.biz/en" target="_blank">Steven Braham</a>
+                        </small>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <small>
-                    &copy;2017 <a href="https://braham.biz/en" target="_blank">Steven Braham</a>
-                </small>
-            </div>
-        </div>
-         </div>
-    </nav>
-</footer>
+        </nav>
+    </footer>
+</div>
 <script src="js/app.js"></script>
 </body>
 </html>
