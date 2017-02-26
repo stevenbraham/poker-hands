@@ -1,14 +1,18 @@
-# This application isn't finished yet
-
 #About
 
-([Working demo](https://sb7.nl/poker))
+([Working demo](https://stevenbraham.github.io/poker-hands-demo/))
 
-**Note: the UI of this application is intended to be used on a smartphone**
+This is a tool that I developed for myself to use during poker games. 
 
-This is a tool that I developed for myself to use during poker games. In the first tab you choose your own cards. In the second tab, keep adding cards as they appear on the table. You can click on a card to delete it. 
+**The UI of this application is intended to be used on a smartphone**
 
-The application will let you know which poker hand you currently have. This is useful if you don't know the rules very well like me.
+#How to use
+
+* In the first tab you see 2 keyboards with card symbols and values. Choose for each keyboard a symbol and a value. Then press lock on each keyboard. Your own 2 cards are now set. The lock buttons now display your own cards in case you forget them.
+* In the second tab you also have a card input keyboard. While the dealer adds card to the table, you have to input them using this keyboard. You can click on a card to delete it. 
+* After a while the button on the bottom of screen starts to flash green. It will tell you the highest combination it has detected. If you click it you can see other card combinations my application has detected.
+
+If you want to play a new game, just refresh the page.
 
 #Technical information
 
