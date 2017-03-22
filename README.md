@@ -1,4 +1,4 @@
-#About
+# About
 
 ([Working demo](https://stevenbraham.github.io/poker-hands-demo/))
 
